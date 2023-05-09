@@ -27,7 +27,7 @@ class PegawaiController extends Controller
         ];
 
         $this->validate($request, [
-            'nama' => 'required|min:5|min:20',
+            'nama' => 'required|min:5|max:20',
             'alamat' => 'required|alpha'
         ], $messages);
 

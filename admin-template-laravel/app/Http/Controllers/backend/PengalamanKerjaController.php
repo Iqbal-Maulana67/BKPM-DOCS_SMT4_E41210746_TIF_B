@@ -26,7 +26,7 @@ class PengalamanKerjaController extends Controller
             'tahun_keluar' => $request->input('tahun_keluar')
         ]);
 
-        return view('backend.layouts.index');
+        return redirect()->route('pengalaman_kerja.index')->with('success', 'Pengalaman Kerja berhasil ditambah.');
     }
 
     public function edit($id){

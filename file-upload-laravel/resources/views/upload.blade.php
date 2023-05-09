@@ -16,6 +16,20 @@
                 <h1 class="text-center"> Upload File dengan Laravel </h1>
                 <form action="{{ route('upload.resize') }}" method="post" enctype="multipart/form-data">
                     @csrf
+
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close text-decoration-none" data-dismiss="alert" aria-label="close">&times;</a>
+                            {{  session('success') }}
+                        </div>
+                    @endif
+
+                    @if (session('error'))
+                        <div class="alert alert-danger alert-dismissible">
+                            <a href="#" class="close text-decoration-none" data-dismiss="alert" aria-label="close">&times;</a>
+                            {{  session('error') }}
+                        </div>
+                    @endif
                     <div class="form-group">
                         <label for="gambar" class="control-label">File Gambar</label>
                         <input type="file" name="file">

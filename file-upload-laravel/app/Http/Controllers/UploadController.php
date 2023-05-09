@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Facades\Image as Image;
+use Intervention\Image\Facades\Image;
 
 class UploadController extends Controller
 {
@@ -43,10 +41,6 @@ class UploadController extends Controller
         ]);
 
         $path = public_path('img/logo');
-
-        if(!File::isDirectory($path)){
-            File::makeDirectory($path, 0777, true);
-        }
 
         $file = $request->file('file');
 

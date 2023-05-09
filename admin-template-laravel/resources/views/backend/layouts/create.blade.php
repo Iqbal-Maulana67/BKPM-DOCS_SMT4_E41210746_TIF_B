@@ -35,7 +35,7 @@
                             <div class="form">
                                 <form class="form-validate form-horizontal" id="pengalaman_kerjan_form" method="POST" action="{{ isset($pengalaman_kerja) ? route('pengalaman_kerja.update', $pengalaman_kerja->id) : route('pengalaman_kerja.store')}}">
                                 @csrf
-                                {!! isset($pengalaman_kerja) ? method_field('PUT') : '' !!}0
+                                {!! isset($pengalaman_kerja) ? method_field('PUT') : '' !!}
                                 <input type="hidden" name="id" value="{{ isset($pengalaman_kerja) ? $pengalaman_kerja->id : '' }}">
 
                                 <div class="form-group">
